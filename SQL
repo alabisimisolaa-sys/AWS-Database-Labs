@@ -1,0 +1,17 @@
+-- Task 2: Create Database and Table
+CREATE DATABASE world;
+USE world;
+
+CREATE TABLE country (
+  Code CHAR(3) PRIMARY KEY,
+  Name CHAR(52),
+  Continent ENUM('Asia','Europe','North America','Africa','Oceania','Antarctica','South America'),
+  Region CHAR(26)
+);
+
+-- Task 2: Fix Typo
+ALTER TABLE country RENAME COLUMN Conitinent TO Continent;
+
+-- Task 3: Cleanup
+DROP TABLE country;
+DROP DATABASE world;
